@@ -23,17 +23,11 @@ function createTopicCard(topic) {
 
     return (
       <>
-       <div
-                      
-                      onClick={(e) => {
-                        e.preventDefault();
-                        location.assign("/pdfVideo/"+topic.topicname);
-                      }}
-                    >
+
       <li className="bg-blue-500  rounded-lg shadow divide-y divide-gray-200 p-4 flex items-center hover:bg-blue-700 focus:outline-none focus:bg-gray-50 transition duration-150 ease-in-out h-60 w-70">
     <TopicCard id={topic._id} name={topic.topicname}  path={topic.path}/>
     </li>
-    </div>
+    
     </>
     );
   }

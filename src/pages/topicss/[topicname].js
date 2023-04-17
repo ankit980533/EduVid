@@ -10,12 +10,13 @@ export async function getServerSideProps(context) {
     const client = await MongoClient.connect(process.env.MONGODB_URI);
     const db = client.db('test');
     const collection = db.collection('vids');
-    const videos = await collection.find({topicname}).toArray(); // filter the posts by category
+    const videos = await collection.find({}).toArray(); // filter the posts by category
   
 
     return {
       props: {
           videos:JSON.parse(JSON.stringify(videos)),
+          topicname,
         
       },
     };
@@ -27,7 +28,7 @@ export async function getServerSideProps(context) {
    
     );
   }
-export default function Cpp({videos}) {
+export default function Cpp({videos,topicname}) {
  
     return (
         <>
@@ -37,7 +38,7 @@ export default function Cpp({videos}) {
         <div className="m:grid sm:grid-cols-2 min-[875px]:grid-cols-3 lg:grid-cols-4 sm:px-2 sm:ml-16 ml-4 flex flex-wrap justify-center">
       {videos.map(createVideoCard)}
 
-      <p>done done done</p>
+      <p>done done done{topicname}</p>
       </div>
       <Footer/>
       </>

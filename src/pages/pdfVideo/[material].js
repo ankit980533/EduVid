@@ -4,6 +4,16 @@ import React from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/Footer";
 import Pdf_video from "@/components/pdf_video";
+
+
+export async function getServerSideProps(context) {
+  const {material} = context.params; 
+  return {
+    props : {
+        material,
+    },
+  };
+}
 // export async function getServerSideProps(context) {
 // //  console.log("tets tets " ,context);
 //    const {topicname} = context.query; 
@@ -28,20 +38,20 @@ import Pdf_video from "@/components/pdf_video";
    
 //     );
 //   }
-const Cpp = (context) => {
-  const {topicname} = context.query; 
-  console.log(topicname);
+const Cpp = ({material}) => {
+ 
+ //  console.log(topicname);
     return (
         <>
         <Navbar/>
        
       
-        {/* <div className="m:grid sm:grid-cols-2 min-[875px]:grid-cols-3 lg:grid-cols-4 sm:px-2 sm:ml-16 ml-4 flex flex-wrap justify-center">
-      {videos.map(createVideoCard)}
-                 <Pdf_video name={topicname}/>
-     <p>done done done {topicname}</p>
-      </div> */}
-      <Footer/>
+         <div className="m:grid sm:grid-cols-2 min-[875px]:grid-cols-3 lg:grid-cols-4 sm:px-2 sm:ml-16 ml-4 flex flex-wrap justify-center">
+
+                 <Pdf_video name={material}/>
+     <p>done done done {material}</p>
+      </div>
+    <Footer/>
       </>
     );
   }
