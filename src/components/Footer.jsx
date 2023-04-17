@@ -18,7 +18,7 @@ const Footer= ()=>{
             <p>Top Courses</p>
           </Link>
           <Link href="/About">
-            <p>About</p>
+            <p>about</p>
           </Link>
           <Link href="/suggestionpage">
             <p>Suggestions</p>

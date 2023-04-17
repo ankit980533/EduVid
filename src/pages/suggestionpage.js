@@ -45,8 +45,7 @@ const SuggestionsFromUsers = () => {
             best.
           </p>
           <p>
-            Hence, if you got any suggestions to incorporate in the website,
-            don't hesitate to leave your suggestions and reviews!
+            Hence, if you got any suggestions to incorporate in the website, do not hesitate to leave your suggestions and reviews.
           </p>
         </div>
         <form

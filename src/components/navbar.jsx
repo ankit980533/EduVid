@@ -78,9 +78,9 @@ const options = [
                
                   return (
                     <Link
-                      className={`my-2  px-4 py-2 border-white hover:text-[#F8C156] border-b-4 mx-2 hover:border-b-[#F8C156] ${emphasiseRoute(
+                      className={`my-2  px-4 py-2 border-white hover:text-[#F8C156] border-b-4 mx-2 hover:border-b-[#F8C156] ${
                         option.url
-                      )}`}
+                      }`}
                       href={option.url}
                       key={index}
                     >
@@ -94,10 +94,10 @@ const options = [
         </div>
       );
     }
-    function emphasiseRoute(url) {
-        const router = useRouter();
-        return router.asPath === url
-          ? "text-[#F8C156]"
-          : "text-black text-xl font-normal";
-      }
+    // function emphasiseRoute(url) {
+    //     const router = useRouter();
+    //     return router.asPath === url
+    //       ? "text-[#F8C156]"
+    //       : "text-black text-xl font-normal";
+    //   }
     export default Navbar;
