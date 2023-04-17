@@ -20,7 +20,6 @@ export async function getServerSideProps(context) {
   };
 }
 function createTopicCard(topic) {
-  console.log("hiihihii",topic.topicname);
 
     return (
       <>
