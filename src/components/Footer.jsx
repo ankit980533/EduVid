@@ -14,7 +14,7 @@ const Footer= ()=>{
           <Link href="/">
             <p>Home</p>
           </Link>
-          <Link href="/topCourses">
+          <Link href="/Popular_courses">
             <p>Top Courses</p>
           </Link>
           <Link href="/About">
