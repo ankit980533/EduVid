@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
-function BranchCard(props){
-
+function    TopicCard(props){
+  console.log("test run",props.name);
+  const abcd="ram";
     return (
-        <Link href={`/branchess/${props.name}`} >
+      
+        <Link href={`/pdfVideo/${props.name}` }>
 
 
                 <div className="px-6 py-7 sm:px-6">
@@ -15,4 +17,4 @@ function BranchCard(props){
 </Link>
     )
 }
-export default BranchCard;
+export default TopicCard;

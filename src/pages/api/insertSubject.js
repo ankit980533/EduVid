@@ -5,11 +5,14 @@ export default async function handler(req, res) {
   await connect();
 
   try {
+
     const subject = new Subject({
         subjectname:req.body.subjectname,
         branchname:req.body.branchname,
-        path:req.body.path
+        path:req.body.path,
+        popular:req.body.isChecked,
     });
+    console.log(subject);
     await subject.save();
     res.status(200).json({ message: 'Data inserted'});
     console.log(subject);

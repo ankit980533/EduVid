@@ -8,7 +8,7 @@ const options = [
     { name: "Home", url: "/" },
     { name: "Popular Courses", url: "/Popular_courses" },
    { name: "About", url: "/about" },
-    { name: "Suggestions", url: "/Suggestions" },
+    { name: "Suggestions", url: "/suggestionpage" },
   ];
 
   function Navbar() {

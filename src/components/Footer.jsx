@@ -20,7 +20,7 @@ const Footer= ()=>{
           <Link href="/About">
             <p>About</p>
           </Link>
-          <Link href="/Suggestions">
+          <Link href="/suggestionpage">
             <p>Suggestions</p>
           </Link>
         </div>

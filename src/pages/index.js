@@ -22,8 +22,17 @@ export async function getServerSideProps() {
 }
 function createBranchCard(branch) {
   return (
+
     <li className="bg-blue-500  rounded-lg shadow divide-y divide-gray-200 p-4 flex items-center hover:bg-blue-700 focus:outline-none focus:bg-gray-50 transition duration-150 ease-in-out h-60 w-70">
+    {/* <div
+                    className="cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      location.assign("/branchess/"+branch.name);
+                    }}
+                  > */}
   <BranchCard id={branch._id} name={branch.name}  path={branch.path}/>
+  {/* </div> */}
   </li>
   );
 }
