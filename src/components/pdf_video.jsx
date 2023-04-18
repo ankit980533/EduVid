@@ -1,12 +1,12 @@
 
 import Link from "next/link";
 function Pdf_video(props){
-  console.log("test run",props);
+  //console.log("test run",props);
     return (
         <>
         <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" >
  
-        <li className="bg-blue-500  rounded-lg shadow divide-y divide-gray-200 p-4 flex items-center hover:bg-blue-700 focus:outline-none focus:bg-gray-50 transition duration-150 ease-in-out h-60 w-70">
+        <li className="bg-blue-500  rounded-lg shadow divide-y divide-gray-200 p-4 flex items-center hover:bg-blue-700 focus:outline-none focus:bg-gray-50 transition duration-150 ease-in-out h-60 w-70 flex items-center justify-center">
     
    
 

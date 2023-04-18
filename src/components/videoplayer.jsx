@@ -7,6 +7,7 @@ import React from 'react'
 //const Player = dynamic(() => import('react-player/lazy'), { ssr: false })
 function VideoPlayer(props) {
   const title =props.title;
+  var i=0;
   return (
     <>
  
@@ -21,7 +22,7 @@ function VideoPlayer(props) {
             
             <ul className="text-xs">
           <li className="font-bold leading-[1.2rem] pb-1 text-sm">
-            {title.slice(0, 46) + (title.length > 46 ? "..." : "")}
+           {props.sequence+1}) {title.slice(0, 46) + (title.length > 46 ? "..." : "")}
           </li>
           </ul>
           </div>

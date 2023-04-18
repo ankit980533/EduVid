@@ -43,15 +43,18 @@ const Cpp = ({material}) => {
  //  console.log(topicname);
     return (
         <>
+        <div className="flex flex-col min-h-screen ">
         <Navbar/>
        
       
-         <div className="m:grid sm:grid-cols-2 min-[875px]:grid-cols-3 lg:grid-cols-4 sm:px-2 sm:ml-16 ml-4 flex flex-wrap justify-center">
+         <div className="flex-1 m:grid sm:grid-cols-2 min-[875px]:grid-cols-3 lg:grid-cols-4 sm:px-2 sm:ml-16 ml-4 flex flex-wrap justify-center items-center ">
 
                  <Pdf_video name={material}/>
-     <p>done done done {material}</p>
+    
       </div>
+      
     <Footer/>
+    </div>
       </>
     );
   }

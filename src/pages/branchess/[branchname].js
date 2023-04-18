@@ -1,11 +1,12 @@
 import { MongoClient } from 'mongodb';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/Footer';
-import BranchCard from '@/components/branchCard';
 import SubjectCard from '@/components/subjectCard';
+import Other from '@/components/other';
+
 export async function getServerSideProps(context) {
   const {branchname} = context.params; 
-  console.log("test 1",branchname); 
+  //console.log("test 1",branchname); 
   const client = await MongoClient.connect(process.env.MONGODB_URI);
   const db = client.db('test');
   const collection = db.collection('subjects');
@@ -27,12 +28,28 @@ function createSubjectCard(subject) {
     );
   }
 function Branch({ subjects,branchname}) {
-  console.log("test 2" ,branchname);
+  //console.log(Object.keys(subjects).length === 0);
+  
+
+  
+    if (Object.keys(subjects).length === 0) {
+      return(
+<>
+<div className="flex flex-col min-h-screen">
+<Navbar/>
+    <Other/>
+    <Footer/>
+  </div>
+
+</>
+      );
+    }
   return (
     <>
-     
+     <div className="flex flex-col min-h-screen">
         <Navbar/>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex-1">
       <h1 className="text-center text-3xl font-bold leading-tight text-gray-900 mb-6 p-4">{branchname} Subjects</h1>
   <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" >
  
@@ -41,6 +58,7 @@ function Branch({ subjects,branchname}) {
   </ul>
   </div>
         <Footer/>
+        </div>
         </>
   );
 }
