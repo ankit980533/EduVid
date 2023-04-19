@@ -4,15 +4,14 @@ export default async function handler(req, res) {
   await connect();
 
   try {
-    console.log("lkkjhh",typeof(req.body.videoLink));
+    //console.log("lkkjhh",typeof(req.body.videoLink));
     const video = new Vid({
         videoLink:req.body.videoLink,
         thumbnailLink:req.body.thumbnailLink,
         topicname:req.body.topicname,
         subjectname:req.body.subjectname,
-        path:req.body.path
     });
-    console.log(video);
+    //console.log(video);
     await video.save();
     res.status(200).json({ message: 'Data inserted'});
     console.log(video);

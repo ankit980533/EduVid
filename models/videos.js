@@ -16,10 +16,7 @@ const videoSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    path: {
-        type: String,
-        required: true,
-    },
+    
 });
 
 const Vid =mongoose.models.Vid || mongoose.model('Vid', videoSchema);
