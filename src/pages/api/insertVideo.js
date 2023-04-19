@@ -5,11 +5,12 @@ export default async function handler(req, res) {
 
   try {
     //console.log("lkkjhh",typeof(req.body.videoLink));
+    //console.log("test", req.body);
     const video = new Vid({
         videoLink:req.body.videoLink,
         thumbnailLink:req.body.thumbnailLink,
+        title:req.body.title,
         topicname:req.body.topicname,
-        subjectname:req.body.subjectname,
     });
     //console.log(video);
     await video.save();

@@ -8,11 +8,11 @@ const videoSchema = new mongoose.Schema({
     thumbnailLink: {
         type: String,
     },
-    topicname: {
+    title: {
         type: String,
         required: true,
     },
-    subjectname:{
+    topicname:{
         type:String,
         required:true,
     },

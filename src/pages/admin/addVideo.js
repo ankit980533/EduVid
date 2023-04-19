@@ -2,8 +2,8 @@ import { useState } from 'react';
 import axios from 'axios';
 
 export default function Form() {
-    const [topicname, settopicName] = useState('');
-  const [subjectname, setsubjectName] = useState('');
+    const [title, settitle] = useState('');
+  const [topicname, settopicName] = useState('');
   const [branchname, setbranchName] = useState('');
   const [path, setPath] = useState('');
   const[videoLink,setvideoLink]=useState('');
@@ -15,13 +15,13 @@ export default function Form() {
 
     try {
     console.log("abcd",videoLink);
-      const response = await axios.post('../api/insertVideo', { videoLink, thumbnailLink , topicname ,subjectname  });
+      const response = await axios.post('../api/insertVideo', { videoLink, thumbnailLink , title,topicname  });
 
-      console.log(response.data);
+     // console.log(response.data);
       setvideoLink('');
       settopicName('');
-      setsubjectName('');
-      setbranchName('');
+      settitle('');
+    
     } catch (error) {
       console.error("abcdef",error.response.data);
     }
@@ -39,12 +39,12 @@ export default function Form() {
         <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" id="thumbnailLink" value={thumbnailLink} onChange={(event) => setthumbnailLink(event.target.value)} />
       </div>
      <div>
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="topicname">Title:</label>
-        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" id="topicname" value={topicname} onChange={(event) => settopicName(event.target.value)} />
+        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">Title:</label>
+        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" id="title" value={title} onChange={(event) => settitle(event.target.value)} />
       </div>
       <div>
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="subjectname">Topic:</label>
-        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" id="subjectname" value={subjectname} onChange={(event) => setsubjectName(event.target.value)} />
+        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="topicname">Topic:</label>
+        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" id="topicname" value={topicname} onChange={(event) => settopicName(event.target.value)} />
       </div>
      
       

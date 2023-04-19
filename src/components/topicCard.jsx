@@ -6,7 +6,7 @@ function TopicCard(props){
     // return (
     //   console.log(props);
     return (
-        <Link href={`/pdfvideo/${props.name}`} >
+        <Link href={`/pdfvideo/${props.path}`} >
 
 
                 <div className="px-6 py-7 sm:px-6">

@@ -9,10 +9,11 @@ export async function getServerSideProps(context) {
  
    const {topicname} = context.params; 
   //console.log("test again 2.0",topicname);
+  const subjectname = topicname;
     const client = await MongoClient.connect(process.env.MONGODB_URI);
     const db = client.db('test');
     const collection = db.collection('vids');
-    const videos = await collection.find({}).toArray(); // filter the posts by category
+    const videos = await collection.find({subjectname}).toArray(); // filter the posts by category
   
 
     return {
